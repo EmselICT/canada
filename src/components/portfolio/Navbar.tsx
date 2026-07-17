@@ -1,0 +1,83 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { NAV, CV_URL } from "@/data";
+
+export function Navbar() {
+  const [open, setOpen] = useState(false);
+  return (
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed inset-x-0 top-0 z-50 border-b border-hairline/40 bg-background/80 backdrop-blur-md"
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+        <a href="#home" className="flex items-baseline">
+          <span className="font-display text-2xl font-semibold tracking-tight text-foreground">
+            Jude
+          </span>
+          <span className="font-display text-2xl font-semibold tracking-tight text-primary">
+            .dev
+          </span>
+        </a>
+
+        <nav className="hidden items-center gap-8 md:flex">
+          {NAV.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <a
+          href={CV_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="hidden rounded-full border border-primary px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground md:inline-flex"
+        >
+          Download CV
+        </a>
+
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          onClick={() => setOpen((v) => !v)}
+          className="md:hidden"
+        >
+          <span className="block h-0.5 w-6 bg-foreground" />
+          <span className="mt-1.5 block h-0.5 w-6 bg-foreground" />
+          <span className="mt-1.5 block h-0.5 w-4 bg-primary" />
+        </button>
+      </div>
+
+      {open && (
+        <div className="border-t border-hairline/40 bg-background md:hidden">
+          <div className="flex flex-col gap-4 px-6 py-6">
+            {NAV.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
+                {item.label}
+              </a>
+            ))}
+            <a
+              href={CV_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-primary px-5 py-2 text-center text-sm font-medium text-primary"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+      )}
+    </motion.header>
+  );
+}
