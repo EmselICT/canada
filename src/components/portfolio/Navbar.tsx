@@ -10,7 +10,7 @@ export function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed inset-x-0 top-0 z-50 border-b border-hairline/40 bg-background/90 backdrop-blur-md"
+      className="fixed inset-x-0 top-0 z-50 border-b border-hairline/40 bg-background backdrop-blur-md"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <a href="#home" className="flex items-baseline">
@@ -62,7 +62,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-[65px] z-50 flex flex-col bg-background/95 backdrop-blur-md md:hidden"
+            className="fixed inset-0 top-[65px] z-50 flex flex-col bg-background backdrop-blur-md md:hidden"
           >
             <button
               type="button"
