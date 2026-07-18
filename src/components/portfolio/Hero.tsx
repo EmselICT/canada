@@ -57,7 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
-          className="relative mx-auto flex w-full max-w-md items-end justify-center sm:h-[300px] lg:max-w-none lg:h-auto"
+          className="relative mx-auto flex w-full max-w-md items-end justify-center self-end sm:h-[300px] lg:max-w-none lg:h-full"
         >
           <div
             className="absolute inset-x-4 top-4 aspect-square rounded-full"
