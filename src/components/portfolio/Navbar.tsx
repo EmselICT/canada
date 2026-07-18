@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 import { NAV, CV_URL } from "@/data";
 
 export function Navbar() {
@@ -54,30 +55,53 @@ export function Navbar() {
         </button>
       </div>
 
-      {open && (
-        <div className="border-t border-hairline/40 bg-background md:hidden">
-          <div className="flex flex-col gap-4 px-6 py-6">
-            {NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="text-sm text-muted-foreground hover:text-foreground"
-              >
-                {item.label}
-              </a>
-            ))}
-            <a
-              href={CV_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-primary px-5 py-2 text-center text-sm font-medium text-primary"
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 top-[65px] z-50 flex flex-col bg-background md:hidden"
+          >
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              className="absolute right-6 top-6"
             >
-              Download CV
-            </a>
-          </div>
-        </div>
-      )}
+              <X className="h-6 w-6 text-foreground" />
+            </button>
+
+            <nav className="flex flex-1 flex-col items-center justify-center gap-8">
+              {NAV.map((item, i) => (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="font-display text-2xl font-semibold text-foreground transition-colors hover:text-primary"
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+            </nav>
+
+            <div className="flex justify-center pb-12">
+              <a
+                href={CV_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-primary px-8 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              >
+                Download CV
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }

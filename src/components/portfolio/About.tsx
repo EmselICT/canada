@@ -10,7 +10,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="relative mx-auto flex aspect-square w-full max-w-md items-end justify-center"
+          className="order-2 relative mx-auto flex aspect-square w-full max-w-md items-end justify-center lg:order-1"
         >
           <div
             className="absolute inset-0 rounded-full"
@@ -34,6 +34,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, delay: 0.1 }}
+          className="order-1 lg:order-2"
         >
           <p className="eyebrow">About me</p>
           <h2 className="mt-5 font-display text-4xl leading-tight font-semibold text-foreground sm:text-5xl">
