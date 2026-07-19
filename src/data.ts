@@ -15,39 +15,6 @@ export const CONTACT = {
     "https://linkedin.com/in/jude-chinonso-chukwuemeka-518963232",
 };
 
-export const JISATECH = {
-  tagline: "Software with soul, shipped like clockwork.",
-  description:
-    "A software studio that builds web platforms, mobile apps, and cloud systems. Founded in 2019, headquartered in Calgary with a second office in Abuja, Nigeria.",
-  url: "https://jisatech.emselictconsults.workers.dev",
-  email: "hello@jisatech.com",
-  phone: "+1 403 681 9694",
-  stats: [
-    { label: "Client retention", value: "94%" },
-    { label: "Kickoff to shippable", value: "6 weeks" },
-    { label: "Offices", value: "2 across 2 continents" },
-    { label: "Team", value: "Every hire is senior" },
-  ],
-  services: [
-    { name: "Software Engineering", desc: "Custom platforms, internal tools, product engineering" },
-    { name: "Web Development", desc: "Marketing sites, dashboards, e-commerce" },
-    { name: "Mobile Applications", desc: "Flutter, React Native — native-feel cross-platform" },
-    { name: "Website Design", desc: "Brand-led editorial sites with art direction and motion" },
-    { name: "UI/UX", desc: "Design systems, research, usability testing, WCAG 2.2" },
-    { name: "Cloud & DevOps", desc: "AWS, Google Cloud, Cloudflare — Terraform, CI/CD" },
-    { name: "IT Consulting", desc: "Architecture reviews, build vs. buy, tech roadmaps" },
-  ],
-  tech: [
-    "Next.js", "React", "Angular", "Svelte", "Flutter", "React Native",
-    "TypeScript", "Python", "Go", "Rust", "Postgres", "AWS",
-    "Google Cloud", "Cloudflare Workers", "Terraform",
-  ],
-  positions: [
-    "Calgary — 450 1st Ave SW, Suite 800",
-    "Abuja — 14 Aguiyi-Ironsi Street, Maitama",
-  ],
-};
-
 export const SKILLS: { name: string; level: number }[] = [
   { name: "Python", level: 92 },
   { name: "JavaScript", level: 90 },
@@ -109,7 +76,6 @@ export const EXPERIENCE = [
 export const NAV = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Jisatech", href: "#jisatech" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },

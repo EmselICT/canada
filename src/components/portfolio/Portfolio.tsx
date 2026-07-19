@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
-import { Jisatech } from "@/components/portfolio/Jisatech";
 import { SkillsEducation } from "@/components/portfolio/SkillsEducation";
 import { Experience } from "@/components/portfolio/Experience";
 import { Contact } from "@/components/portfolio/Contact";
@@ -14,7 +13,6 @@ export function Portfolio() {
       <main>
         <Hero />
         <About />
-        <Jisatech />
         <SkillsEducation />
         <Experience />
         <Contact />

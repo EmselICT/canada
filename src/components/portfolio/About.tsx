@@ -51,6 +51,18 @@ export function About() {
               are used by real people, and I try to write code that makes sense
               a year later.
             </p>
+            <p>
+              I am also the co-founder of{" "}
+              <a
+                href="https://jisatech.emselictconsults.workers.dev"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+              >
+                Jisatech
+              </a>
+              , a software studio that builds web platforms, mobile apps, and cloud systems. We work with startups and businesses across Calgary and Abuja, shipping everything from custom SaaS products to enterprise tools.
+            </p>
           </div>
 
           <dl className="mt-8 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
