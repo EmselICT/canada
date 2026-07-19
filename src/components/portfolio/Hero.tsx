@@ -21,6 +21,9 @@ export function Hero() {
             <br />
             a Full Stack Developer.
           </h1>
+          <p className="mt-3 text-sm font-medium text-primary">
+            Co-founder of Jisatech
+          </p>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
             Based in Calgary. I build web applications with Python, JavaScript,
             React, Django, and WordPress.

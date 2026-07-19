@@ -38,7 +38,7 @@ export function About() {
           <h2 className="mt-5 font-display text-4xl leading-tight font-semibold text-foreground sm:text-5xl">
             A bit about who I am
           </h2>
-          <p className="mt-4 font-medium text-primary">Full Stack Web Developer</p>
+          <p className="mt-4 font-medium text-primary">Full Stack Developer & Co-founder of Jisatech</p>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>
               I have been building web applications for about ten years now.
