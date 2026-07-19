@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ABOUT_IMG, CONTACT, CV_URL } from "@/data";
+import { ABOUT_IMG, CONTACT } from "@/data";
 
 export function About() {
   return (
@@ -20,8 +20,6 @@ export function About() {
               filter: "blur(40px)",
             }}
           />
-          <div className="absolute inset-4 rounded-full border border-primary/40" />
-          <div className="absolute inset-12 rounded-full border border-hairline/50" />
           <img
             src={ABOUT_IMG}
             alt="Jude in profile"
@@ -63,14 +61,6 @@ export function About() {
           </dl>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href={CV_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
-            >
-              Download CV
-            </a>
             <a
               href={CONTACT.linkedin}
               target="_blank"

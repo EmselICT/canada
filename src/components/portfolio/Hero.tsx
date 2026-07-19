@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { FileText, Mail, Phone, Linkedin, Github } from "lucide-react";
-import { HERO_IMG, CV_URL, CONTACT } from "@/data";
+import { Mail, Phone, Linkedin, Github } from "lucide-react";
+import { HERO_IMG, CONTACT } from "@/data";
 
 export function Hero() {
   return (
@@ -32,17 +32,6 @@ export function Hero() {
             >
               About me
             </a>
-            <a
-              href={CV_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-3 text-sm font-medium text-foreground"
-            >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline transition group-hover:border-primary group-hover:text-primary">
-                <FileText className="h-4 w-4" />
-              </span>
-              View my CV
-            </a>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10">
@@ -67,8 +56,6 @@ export function Hero() {
               filter: "blur(30px)",
             }}
           />
-          <div className="absolute inset-x-6 top-6 aspect-square rounded-full border border-primary/40" />
-          <div className="absolute inset-x-14 top-14 aspect-square rounded-full border border-hairline/60" />
           <img
             src={HERO_IMG}
             alt="Portrait of Jude Chinonso Chukwuemeka"

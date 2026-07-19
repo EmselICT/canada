@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import { NAV, CV_URL } from "@/data";
+import { NAV } from "@/data";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,9 +17,6 @@ export function Navbar() {
           <span className="font-display text-2xl font-semibold tracking-tight text-foreground">
             Jude
           </span>
-          <span className="font-display text-2xl font-semibold tracking-tight text-primary">
-            .dev
-          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -33,15 +30,6 @@ export function Navbar() {
             </a>
           ))}
         </nav>
-
-        <a
-          href={CV_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="hidden rounded-full border border-primary px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground md:inline-flex"
-        >
-          Download CV
-        </a>
 
         <button
           type="button"
@@ -88,17 +76,6 @@ export function Navbar() {
                 </motion.a>
               ))}
             </nav>
-
-            <div className="flex justify-center pb-12">
-              <a
-                href={CV_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-primary px-8 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-              >
-                Download CV
-              </a>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
